@@ -3,7 +3,7 @@
 use Games\PhpAIPlatforms\AIServiceAdapter;
 use Games\PhpAIPlatforms\Contracts\AIService;
 use Games\PhpAIPlatforms\Services\GoogleAIService;
-use Games\PhpAIPlatforms\Services\OpenAIService;
+use Games\PhpAIPlatforms\OpenAI\OpenAIService;
 
 it('adapter can add services', function () {
     $adapter = new \Games\PhpAIPlatforms\AIServiceAdapter();

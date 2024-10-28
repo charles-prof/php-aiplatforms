@@ -2,10 +2,18 @@
 
 declare(strict_types=1);
 
-namespace YourMonorepo\FirstPackage;
+namespace Games\PhpAIPlatforms\OpenAI;
 
-final class OpenAIService
+interface AIService {
+    public function process($request);
+}
+
+final class OpenAIService implements AIService
 {
 
+    public function process($request) {
+        // OpenAI processing logic
+        return "OpenAI response for: " . $request;
+    }
     
 }

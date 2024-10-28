@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace YourMonorepo\SecondPackage;
+namespace Games\PhpAIPlatforms\Groq;
 
 final class GroqAIService
 {

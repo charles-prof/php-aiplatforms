@@ -1,6 +1,6 @@
 # AI Platform Adapter
 
-creating an service adapter class, for using any suitable AI provider in PHP.
+creating a service adapter class, for using any suitable AI provider in PHP.
 
 # use your favorite AI platform
 

@@ -22,9 +22,7 @@
     },
     "replace": {
         "games/phpaiplatforms-groq": "self.version",
-        "games/phpaiplatforms-openai": "self.version",
-        "your-monorepo/first-package": "self.version",
-        "your-monorepo/second-package": "self.version"
+        "games/phpaiplatforms-openai": "self.version"
     },
     "minimum-stability": "stable",
     "autoload": {
