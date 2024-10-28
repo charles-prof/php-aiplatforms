@@ -1,0 +1,46 @@
+# AI Service Adapter Class
+class AIServiceAdapter {
+    private $services = [];
+
+    public function addService(AIService $service) {
+        $this->services[] = $service;
+    }
+
+    public function processRequest($request) {
+        $responses = [];
+        foreach ($this->services as $service) {
+            $responses[] = $service->process($request);
+        }
+        return $responses;
+    }
+}
+
+interface AIService {
+    public function process($request);
+}
+
+class OpenAIService implements AIService {
+    public function process($request) {
+        // OpenAI processing logic
+        return "OpenAI response for: " . $request;
+    }
+}
+
+class GoogleAIService implements AIService {
+    public function process($request) {
+        // Google AI processing logic
+        return "Google AI response for: " . $request;
+    }
+}
+
+// Usage
+$adapter = new AIServiceAdapter();
+$adapter->addService(new OpenAIService());
+$adapter->addService(new GoogleAIService());
+
+$request = "What is the weather today?";
+$responses = $adapter->processRequest($request);
+
+foreach ($responses as $response) {
+    echo $response . "\n";
+}

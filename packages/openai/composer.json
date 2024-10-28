@@ -1,0 +1,13 @@
+{
+    "name": "your-monorepo/first-package",
+    "require": {
+        "php": "^8.2",
+        "symfony/http-kernel": "^5.0",
+        "openai-php/client": "^0.10.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Games\\PhpAIPlatforms\\OpenAI\\": "src"
+        }
+    }
+}

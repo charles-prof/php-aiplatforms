@@ -1,0 +1,12 @@
+{
+    "name": "your-monorepo/second-package",
+    "require": {
+        "php": "^8.2",
+        "lucianotonet/groq-php": "^0.0.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Games\\PhpAIPlatforms\\Groq\\": "src"
+        }
+    }
+}

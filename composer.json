@@ -1,0 +1,48 @@
+{
+    "name": "games/php-aiplatforms",
+    "description": "an adapter for working with multiple ai platforms",
+    "license": "MIT",
+    "type": "metapackage",
+    "version": "0.3.1",
+    "authors": [
+        {
+            "name": "Charles Kumar",
+            "email": "gamescharlie79@gmail.com"
+        }
+    ],
+    "require": {
+        "lucianotonet/groq-php": "^0.0.9",
+        "openai-php/client": "^0.10.2",
+        "php": "^8.2",
+        "symfony/http-kernel": "^5.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.5",
+        "symplify/monorepo-builder": "^11.2"
+    },
+    "replace": {
+        "games/phpaiplatforms-groq": "self.version",
+        "games/phpaiplatforms-openai": "self.version",
+        "your-monorepo/first-package": "self.version",
+        "your-monorepo/second-package": "self.version"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Games\\PhpAIPlatforms\\": "src/",
+            "Games\\PhpAIPlatforms\\Groq\\": "packages/groq/src",
+            "Games\\PhpAIPlatforms\\OpenAI\\": "packages/openai/src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Games\\PhpAIPlatforms\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
+        }
+    }
+}
