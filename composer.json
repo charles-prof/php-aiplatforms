@@ -11,25 +11,26 @@
         }
     ],
     "require": {
+        "guzzlehttp/guzzle": "^7.9",
         "lucianotonet/groq-php": "^0.0.9",
         "openai-php/client": "^0.10.2",
         "php": "^8.2",
-        "symfony/http-kernel": "^5.0"
+        "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
         "pestphp/pest": "^3.5",
         "symplify/monorepo-builder": "^11.2"
     },
     "replace": {
-        "games/phpaiplatforms-groq": "self.version",
-        "games/phpaiplatforms-openai": "self.version"
+        "charles-prof/laravelaiplatforms": "self.version",
+        "charles-prof/wordpressaiplatforms": "self.version"
     },
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Games\\PhpAIPlatforms\\": "src/",
-            "Games\\PhpAIPlatforms\\Groq\\": "packages/groq/src",
-            "Games\\PhpAIPlatforms\\OpenAI\\": "packages/openai/src"
+            "Games\\PhpAIPlatforms\\Laravel\\": "packages/laravel/src",
+            "Games\\PhpAIPlatforms\\Wordpress\\": "packages/wordpress/src"
         }
     },
     "autoload-dev": {
